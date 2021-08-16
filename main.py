@@ -25,7 +25,7 @@ def upload_files():
         upload_file.save(file_loc)
         data = handler.calculate(file_loc)
     #return redirect(url_for('index',data))
-    return render_template('index.html', data=[data, "hello kaya" ])
+    return render_template('index.html', data=[data, upload_file.filename])
 
 if __name__ == "__main__":
     #app.run()
